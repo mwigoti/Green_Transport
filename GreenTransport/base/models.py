@@ -29,7 +29,16 @@ class Order(models.Model):
     def __str__(self):
         return self.name
     
+class Contact(models.Model):
+    message=models.AutoField(primary_key=True)
+    name=models.CharField(max_length=50, default="")
+    email=models.EmailField()
+    phone_number=models.CharField(max_length=15,default="")
+    message=models.TextField(max_length=500,default="")
 
+    def __str__(self):
+        return self.name
+    
 
 
 
