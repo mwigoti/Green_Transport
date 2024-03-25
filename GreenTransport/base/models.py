@@ -3,5 +3,6 @@ from email.policy import default
 
 # Create your models here.
 
-
-print("hello")
+class Car(models.Model):
+    car_id=models.IntegerField(default=0)
+    
