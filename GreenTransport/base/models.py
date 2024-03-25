@@ -23,6 +23,13 @@ class Order(models.Model):
     cars=models.ForeignKey(Car, on_delete=models.CASCADE)
     days_for_rent=models.DateTimeField()
     date = models.DateTimeField(auto_now_add=True)
+    loc_from=models.CharField(max_length=50,default="")
+    loc_to=models.CharField(max_length=50,default="")
+
+    def __str__(self):
+        return self.name
+    
+
 
 
 
