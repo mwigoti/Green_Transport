@@ -13,3 +13,8 @@ class Car(models.Model):
     def __str__(self):
         return self.car_name
     
+class Order(models.Model):
+    order_id=models.AutoField(primary_key=True)
+    name=models.CharField(max_length=90, default="")
+
+    
