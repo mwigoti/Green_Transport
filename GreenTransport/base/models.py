@@ -16,5 +16,14 @@ class Car(models.Model):
 class Order(models.Model):
     order_id=models.AutoField(primary_key=True)
     name=models.CharField(max_length=90, default="")
+    email=models.EmailField()
+    phone=models.CharField(max_length=13,default="")
+    address=models.CharField(max_length=50,default="")
+    city=models.CharField(max_length=50,default="")
+    cars=models.ForeignKey(Car, on_delete=models.CASCADE)
+    days_for_rent=models.DateTimeField()
+    date = models.DateTimeField(auto_now_add=True)
+
+
 
     
